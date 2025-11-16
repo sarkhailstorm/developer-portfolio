@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Toaster } from "react-hot-toast";
 import DisableInspect from "@/components/DisableInspect";
+import { Analytics } from "@vercel/analytics/next";
 
 const font = Sora({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
@@ -42,6 +43,7 @@ export default function RootLayout({
           <Navbar />
           <SideBar />
           {children}
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
