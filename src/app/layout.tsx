@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/letter-s.png" />
+        <link rel="icon" href="/letter-s dark.png" />
       </head>
       <body className={`${font.className} dark:bg-black text-white`}>
         <ThemeProvider
