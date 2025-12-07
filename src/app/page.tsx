@@ -59,7 +59,11 @@ const HomePage = () => {
       >
         {mounted && (
           <motion.img
-            src={`${theme === "dark" ? "/boy dark.png" : "/boy light.png"}`}
+            src={`${
+              theme === "dark"
+                ? "/boy images/boy dark.png"
+                : "/boy images/boy light.png"
+            }`}
             alt="Portfolio"
             className="w-full h-full object-cover"
             animate={screenSize === "desktop" ? { scale: [1, 1.05, 1] } : {}}
@@ -79,11 +83,13 @@ const HomePage = () => {
           variants={fadeInLeft}
         >
           Hiya, I&apos;m{" "}
-          <span className="dark:text-[#FF0000] text-indigo-700 ">Sarkhail</span>
+          <span className="dark:text-[#FF0000] text-indigo-700 dark:stroke-gray-50 ">
+            Sarkhail
+          </span>
         </motion.h1>
 
         <motion.span
-          className="md:text-3xl md:text-start text-2xl text-center dark:text-blue-300 text-slate-600 font-semibold"
+          className="md:text-3xl md:text-start text-2xl text-center dark:bg-gradient-to-b dark:from-gray-200 dark:to-gray-500 dark:bg-clip-text dark:text-transparent text-slate-600 font-semibold"
           variants={fadeInRight}
         >
           <ReactTyped
@@ -106,10 +112,10 @@ const HomePage = () => {
           variants={fadeInRight}
         >
           CS grad who loves turning ideas into actual working stuff. From
-          Front-End magic to Back-End logic, I&apos;m about building things that just
-          work. I like keeping things secure too, no unexpected surprises on my
-          watch. Big fan of Linux, scripting, and automating the boring stuff so
-          I can focus on the fun parts.
+          Front-End magic to Back-End logic, I&apos;m about building things that
+          just work. I like keeping things secure too, no unexpected surprises
+          on my watch. Big fan of Linux, scripting, and automating the boring
+          stuff so I can focus on the fun parts.
         </motion.p>
 
         <motion.div
