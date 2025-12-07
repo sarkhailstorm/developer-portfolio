@@ -30,14 +30,16 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/letter-s dark.png" />
       </head>
-      <body className={`${font.className} dark:bg-black text-white`}>
+      <body
+        className={`${font.className} dark:bg-[radial-gradient(circle_at_top,#1e1e1e,#000000)] text-white`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem={false}
           disableTransitionOnChange
         >
-          <DisableInspect />
+          {/* <DisableInspect /> */}
           <Toaster position="top-center" />
           <Loading />
           <Navbar />

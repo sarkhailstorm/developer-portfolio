@@ -87,19 +87,25 @@ const SideBar = () => {
               href={href}
               className={`group relative flex items-center md:hover:gap-3 px-3 py-2 md:p-3 rounded-full transition-all duration-300 ease-in-out md:hover:pl-5 ${
                 pathname === href
-                  ? "dark:md:bg-blue-700 bg-none md:bg-slate-800"
-                  : "dark:md:bg-[#FF0000] md:bg-indigo-700"
+                  ? "dark:bg-neutral-800/80 dark:text-white border dark:border-neutral-700 bg-none md:bg-slate-800"
+                  : "dark:md:bg-gradient-to-b dark:md:from-gray-200 dark:md:to-gray-500 dark:md:text-black md:bg-indigo-700"
               }`}
               onClick={() => setIsOpen(false)}
             >
-              <motion.span className="overflow-hidden opacity-0 w-0 md:group-hover:w-[4.4rem] md:group-hover:opacity-100 transition-all duration-300 ease-in-out text-white text-md">
+              <motion.span
+                className={`overflow-hidden opacity-0 w-0 md:group-hover:w-[4.4rem] md:group-hover:opacity-100 transition-all duration-300 ease-in-out  text-white text-md ${
+                  pathname === href
+                    ? "dark:md:text-white"
+                    : "dark:md:text-black"
+                }`}
+              >
                 {label}
               </motion.span>
               <motion.span
                 className={`text-3xl transition-transform duration-300 ${
                   pathname === href
-                    ? "dark:text-[#FF0002] md:dark:text-white text-indigo-700 md:text-white"
-                    : "dark:text-white text-slate-800 md:text-white"
+                    ? "dark:md:text-white text-indigo-700 md:text-white"
+                    : "dark:text-black"
                 }`}
               >
                 {icon}

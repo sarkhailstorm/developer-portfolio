@@ -83,13 +83,13 @@ const HomePage = () => {
           variants={fadeInLeft}
         >
           Hiya, I&apos;m{" "}
-          <span className="dark:text-[#FF0000] text-indigo-700 dark:stroke-gray-50 ">
+          <span className="dark:text-[#FF0000] text-indigo-700 dark:bg-gradient-to-r dark:from-neutral-400/80 dark:via-neutral-200 dark:to-neutral-400/80 font-extrabold dark:[-webkit-text-stroke:1.5px] dark:bg-clip-text dark:text-transparent ">
             Sarkhail
           </span>
         </motion.h1>
 
         <motion.span
-          className="md:text-3xl md:text-start text-2xl text-center dark:bg-gradient-to-b dark:from-gray-200 dark:to-gray-500 dark:bg-clip-text dark:text-transparent text-slate-600 font-semibold"
+          className="md:text-3xl md:text-start text-2xl text-center dark:bg-gradient-to-b dark:from-gray-200 dark:to-gray-500 dark:bg-clip-text dark:text-transparent text-slate-600 font-bold"
           variants={fadeInRight}
         >
           <ReactTyped
@@ -98,6 +98,7 @@ const HomePage = () => {
               "Software Engineer",
               "Frontend Expert",
               "Backend Engineer",
+              "Data Analyst",
               "Open-Source Contributer",
               "Security Aficionado",
             ]}
@@ -111,11 +112,11 @@ const HomePage = () => {
           className="md:w-[85%] pt-2 dark:text-gray-300 text-gray-600 w-[100%] md:text-start text-center md:px-0 px-4"
           variants={fadeInRight}
         >
-          CS grad who loves turning ideas into actual working stuff. From
-          Front-End magic to Back-End logic, I&apos;m about building things that
-          just work. I like keeping things secure too, no unexpected surprises
-          on my watch. Big fan of Linux, scripting, and automating the boring
-          stuff so I can focus on the fun parts.
+          CS grad who enjoys building things from the parts people interact with
+          to the parts they never see. And somewhere along the way, I've
+          realised it's pretty satisfying to take messy data and make sense of
+          it. Big fan of Linux, scripting, and automating the boring stuff so I
+          can focus on the fun parts.
         </motion.p>
 
         <motion.div
@@ -125,7 +126,7 @@ const HomePage = () => {
           <a
             href="/cv.pdf"
             download
-            className="group flex items-center max-w-max p-1 rounded-lg dark:bg-[#FF0000] bg-indigo-700 md:hover:bg-indigo-700 transition-all duration-300 gap-3 md:gap-0 md:hover:gap-2 dark:md:hover:bg-[#FF0000] hover:bg-indigo-600"
+            className="group flex items-center max-w-max p-1 rounded-lg dark:md:bg-gradient-to-b dark:md:from-gray-200 dark:md:to-gray-500 dark:md:text-black bg-indigo-700 md:hover:bg-indigo-700 transition-all duration-300 gap-3 md:gap-0 md:hover:gap-2 dark:md:hover:bg-[#FF0000] hover:bg-indigo-600"
           >
             {screenSize === "desktop" ? (
               <MdOutlineReadMore className="text-4xl transition-transform duration-300 hover:rotate-90" />
