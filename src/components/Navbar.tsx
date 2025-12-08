@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaDiscord } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { FaSignalMessenger } from "react-icons/fa6";
@@ -43,14 +43,10 @@ const Navbar = () => {
         } md:translate-x-0 md:opacity-100`}
       >
         {mounted && (
-          <Link href={"/"}>
-            <img
-              src={
-                theme === "dark" ? "/letter-s dark.png" : "/letter-s light.png"
-              }
-              alt="Logo"
-              className="w-12 h-12 hidden md:flex"
-            />
+          <Link href="/" className="hidden md:flex items-center">
+            <span className="text-6xl font-black select-none text-black dark:md:bg-gradient-to-b dark:md:from-gray-200 dark:md:to-gray-500 dark:md:bg-clip-text dark:md:text-transparent transition-transform duration-300 hover:scale-105">
+              S
+            </span>
           </Link>
         )}
 
