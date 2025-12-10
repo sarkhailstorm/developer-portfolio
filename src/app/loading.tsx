@@ -23,7 +23,7 @@ const Loading = () => {
   
   return isLoading ? (
     <div className="dark:bg-[radial-gradient(circle_at_top,#1e1e1e,#000000)] inset-0 z-50 fixed flex items-center justify-center">
-      <HashLoader color={theme === "dark" ? "#FF0000" : "#3730a3"} size={100} />
+      <HashLoader color={theme === "dark" ? "gray" : "#3730a3"} size={100} />
     </div>
   ) : null;
 };
