@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { HashLoader } from "react-spinners";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
@@ -23,7 +22,7 @@ const Loading = () => {
   if (!mounted) return null;
   
   return isLoading ? (
-    <div className="dark:bg-black inset-0 z-50 fixed flex items-center justify-center">
+    <div className="dark:bg-[radial-gradient(circle_at_top,#1e1e1e,#000000)] inset-0 z-50 fixed flex items-center justify-center">
       <HashLoader color={theme === "dark" ? "#FF0000" : "#3730a3"} size={100} />
     </div>
   ) : null;
