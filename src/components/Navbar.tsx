@@ -10,8 +10,7 @@ import toast from "react-hot-toast";
 import { IoIosClose } from "react-icons/io";
 import { useTheme } from "next-themes";
 import { TbMessage2Up } from "react-icons/tb";
-import { Button } from "./ui/button";
-import { LuThumbsUp } from "react-icons/lu";
+import LikeButton from "./LikeButton";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,9 +53,7 @@ const Navbar = () => {
 
         <div className="flex gap-4 justify-center md:justify-start">
           <div className="flex gap-4">
-            <Button>
-              <LuThumbsUp /> 0
-            </Button>
+            <LikeButton />
             <a
               href="#"
               title="Discord"
