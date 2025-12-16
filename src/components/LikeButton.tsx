@@ -23,6 +23,9 @@ const LikeButton = () => {
   }, []);
 
   async function handleClick() {
+    setLikes((prev:any) => prev + 1);
+    setHasLiked(true);
+
     try {
       const res = await fetch("/api/likes", { method: "POST" });
       const data = await res.json();
@@ -34,9 +37,9 @@ const LikeButton = () => {
   return (
     <div className="flex items-center justify-center gap-2 text-lg dark:text-white text-black">
       <LuThumbsUp
-        onClick={handleClick}
+        onClick={!hasLiked ? handleClick : undefined}
         className={`flex flex-row cursor-pointer hover:scale-110 ease-in-out duration-300 ${
-          hasLiked ? "dark:fill-white" : "dark:text-white text-black text-2xl"
+          hasLiked ? "dark:fill-white pointer-events-none cursor-not-allowed" : "dark:text-white text-black text-2xl"
         }`}
       />{" "}
       {likes ?? 0}
