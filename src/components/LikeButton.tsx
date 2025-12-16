@@ -1,13 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Button } from "./ui/button";
 import { LuThumbsUp } from "react-icons/lu";
 
 const LikeButton = () => {
   const [likes, setLikes] = useState();
   const [hasLiked, setHasLiked] = useState(false);
-
 
   useEffect(() => {
     async function fetchLikes() {
@@ -34,9 +32,15 @@ const LikeButton = () => {
   }
 
   return (
-    <Button onClick={handleClick} disabled={hasLiked}>
-      <LuThumbsUp className={`${hasLiked ? "text-blue-500" : "text-black"}`} /> {likes ?? 0}
-    </Button>
+    <div className="flex items-center justify-center gap-2 text-lg dark:text-white text-black">
+      <LuThumbsUp
+        onClick={handleClick}
+        className={`flex flex-row cursor-pointer hover:scale-110 ease-in-out duration-300 ${
+          hasLiked ? "dark:fill-white" : "dark:text-white text-black text-2xl"
+        }`}
+      />{" "}
+      {likes ?? 0}
+    </div>
   );
 };
 
