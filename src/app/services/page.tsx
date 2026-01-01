@@ -59,7 +59,7 @@ const ServicesPage = () => {
                 <CarouselItem key={index}>
                   <div className="p-1">
                     <Card>
-                      <CardContent className="flex flex-col gap-2 aspect-square p-6 dark:border-none border border-gray-300 rounded-xl">
+                      <CardContent className="flex flex-col gap-2 aspect-square p-6 dark:border-none border border-gray-300 rounded-xl dark:bg-[radial-gradient(circle_at_top,#1e1e1e,#000000)]">
                         <div>
                           <img
                             src={service.img}
@@ -125,7 +125,7 @@ const ServicesPage = () => {
             })}
           </nav>
 
-          <div className="p-4 border dark:border-[#27272a] border-gray-300 rounded-xl dark:shadow-none shadow-sm shadow-gray-300 h-64">
+          <div className="p-4 border dark:border-[#27272a] border-gray-300 rounded-xl dark:shadow-none shadow-sm shadow-gray-300 h-64 dark:bg-[radial-gradient(circle_at_top,#1e1e1e,#000000)]">
             {details[activeSection]}
           </div>
         </div>
