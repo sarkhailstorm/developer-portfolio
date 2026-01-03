@@ -35,7 +35,7 @@ const CountUp = ({
   return (
     <div ref={ref}>
       <div className="flex flex-col gap-1">
-        <h2 className="text-3xl font-bold dark:text-[#FF0000] text-indigo-800">{count}+</h2>
+        <h2 className="text-3xl font-bold dark:bg-gradient-to-r dark:from-neutral-400/80 dark:via-neutral-200 dark:to-neutral-400/80 dark:[-webkit-text-stroke:1.5px] dark:bg-clip-text dark:text-transparent">{count}+</h2>
         <p className="text-sm font-bold dark:text-white text-gray-800">
           {initialText} <br /> {endText}
         </p>
