@@ -23,7 +23,7 @@ const ServicesPage = () => {
     useState<keyof typeof details>("internship");
 
   return (
-    <div className="h-screen overflow-hidden md:overflow-visible items-center flex flex-col md:justify-center w-full max-w-4xl mx-auto md:gap-6 gap-20 pt-40 md:pt-0">
+    <div className="h-screen overflow-hidden md:overflow-visible items-center flex flex-col justify-center w-full max-w-4xl mx-auto md:gap-6 gap-20 pt-40 md:pt-0">
       <div>
         <motion.h1
           initial={{ y: -200, opacity: 0 }}
@@ -36,7 +36,7 @@ const ServicesPage = () => {
             damping: 5,
             mass: 1,
           }}
-          className="text-4xl font-bold md:mt-20 dark:text-white text-gray-800"
+          className="text-4xl font-bold dark:text-white text-gray-800"
         >
           How do I help?
         </motion.h1>
